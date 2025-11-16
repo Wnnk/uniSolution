@@ -1,46 +1,33 @@
 <template>
   <view class="index-page">
-    <view class="container">
-      <uni-card
-        is-full
-        v-for="item in menu"
-        :key="item.value"
-        @click="toView(item.value)"
-      >
-        <image :src="item.image" class="menu-image" mode="widthFix"></image>
-        <text> {{ item.label }}</text>
-      </uni-card>
+    <view class="sreach index-card">
+      <Sreach />
     </view>
+    <view class="shop-tab index-card"></view>
+    <view class="bar index-card">
+      <Bar />
+    </view>
+    <view class="advance-notice-card index-card"></view>
+    <view class="swiper index-card"></view>
+    <view class="hot index-card"></view>
   </view>
 </template>
 
 <script setup lang="ts">
 import { ref } from "vue";
-const menu = ref([
-  {
-    label: "列表",
-    image: "/static/images/list.png",
-    value: "/pages/list/list",
-  },
-  {
-    label: "网络图片下载本地",
-    image: "/static/images/clip.png",
-    value: "/pages/clip/clip",
-  },
-  {
-    label: "基础表单",
-    iamge: "",
-    value: "/pages/formMap/formMap",
-  },
-]);
-
-const toView = (url: string) => {
-  uni.navigateTo({
-    url,
-  });
-};
+import Bar from "./component/bar.vue";
+import Sreach from "./component/sreach.vue";
 </script>
 
-<style>
-@import url("index.css");
+<style scoped>
+.index-page {
+  background-color: #f5f5f5;
+  padding-top: 20rpx;
+  min-height: 100vh;
+}
+.index-card {
+  margin: 20rpx 20rpx;
+  background-color: #fff;
+  border-radius: 16rpx;
+}
 </style>
