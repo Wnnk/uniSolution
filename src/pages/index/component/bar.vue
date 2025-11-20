@@ -23,14 +23,19 @@ const menu = ref([
     value: "/pages/list/list",
   },
   {
-    label: "网络图片下载本地",
+    label: "工具使用",
     image: "/static/images/clip.png",
-    value: "/pages/clip/clip",
+    value: "/pages/useUtils/useUtils",
   },
   {
     label: "基础表单",
-    iamge: "",
+    image: "/static/images/baseForm.png",
     value: "/pages/formMap/formMap",
+  },
+  {
+    label: '问卷',
+    image: '/static/images/question.png',
+    value: '/pages/question/question'
   },
 ]);
 
@@ -56,10 +61,11 @@ const toView = (url: string) => {
   -ms-overflow-style: none; /* IE/Edge */
 }
 /* WebKit 内核（Chrome/微信小程序等） */
-.scroll-view::-webkit-scrollbar {
-  display: none;
-  width: 0;
-  height: 0;
+::-webkit-scrollbar {
+display: none;
+width: 0;
+height: 0;
+color: transparent;
 }
 
 /* 内容容器：实现2行布局，超出横向滚动 */

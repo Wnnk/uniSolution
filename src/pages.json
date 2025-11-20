@@ -16,11 +16,14 @@
 			"path": "pages/list/list"
 		},
 		{
-			"path": "pages/clip/clip"
+			"path": "pages/useUtils/useUtils"
 		},
 		{
 			"path": "pages/formMap/formMap"
-		}
+		},
+    { 
+      "path":"pages/question/question"
+    }
   ],
   "globalStyle": {
     "navigationBarTextStyle": "black",
